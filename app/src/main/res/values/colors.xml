@@ -9,6 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background_preto">#1C1C1C</color>
     <color name="verde">#43ECBF</color>
-    <color name="cinza1">#646161</color>
-    <color name="cinza2">#B0AFAF</color>
+    <color name="navButton">#707070</color>
+    <color name="cinza1">#64C6161</color>
+    <color name="cinza2">#BC0AFAF</color>
+    <color name="cinza3">#1C1C1C</color>
+
 </resources>
