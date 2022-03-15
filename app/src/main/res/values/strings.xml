@@ -1,5 +1,33 @@
 <resources>
-    <string name="app_name">Projeto Eventos</string>
+    <!-- Escolha Tipo de Conta -->
+    <string name="texto_cadastro">Falta pouco para acessar e curtir nossos \n eventos, complete seu cadastro !</string>
+    <string name="texto_preencher">* Preencha todos os dados abaixo para completar seu cadastro.</string>
+    <string name="pessoa_fisica">Pessoa física</string>
+    <string name="pessoa_juridica">Pessoa jurídica</string>
+    <string name="continuar">CONTINUAR</string>
+
+    <!-- Informações Conta Jurídica -->
+    <string name="criar_conta">Criar Conta</string>
+    <string name="texto_juridico">Falta pouco para acessar e curtir nossos eventos, complete seu cadastro de conta Pessoa Jurídica.</string>
+    <string name="nome_proprietario">Nome do Proprietário</string>
+    <string name="cnpj">CNPJ</string>
+    <string name="razao_social">Razão Social</string>
+    <string name="nome_fantasia">Nome Fantasia</string>
+
+    <!-- Informações Conta Física -->
+    <string name="conta_fisica">Falta pouco para acessar e curtir nossoo eventos, complete seu cadastro !</string>
+    <string name="nome">Nome</string>
+    <string name="cpf">CPF</string>
+    <string name="data_nascimento">Data de Nascimento</string>
+
+    <!-- Informações Conta Física2 -->
+    <string name="texto_fisico2">Para finalizar, insira um email e senha \n que serão usados para fazer login.</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="confirmar_senha">Confirmar Senha</string>
+    <string name="finalizar_cadastro">Finalizar Cadastro</string>
+    <string name="li_concordo">Li e concordo com</string>
+    <string name="termos_condicoes">Termos e Condições</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
