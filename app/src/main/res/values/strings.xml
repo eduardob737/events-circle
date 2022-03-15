@@ -2,4 +2,9 @@
     <string name="app_name">Projeto Eventos</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nome_home">Olá, Pedro!</string>
+    <string name="apresentacao_home">O que gostaria de fazer hoje?</string>
+    <string name="eventos_da_semana">Eventos da semana</string>
+    <string name="estabelecimento_recomendados">Estabelecimento recomendados</string>
+    <string name="eventos_do_mes">Eventos do mês</string>
 </resources>
