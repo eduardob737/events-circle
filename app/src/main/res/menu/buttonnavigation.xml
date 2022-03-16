@@ -7,11 +7,6 @@
         android:title="@string/home_button" />
 
     <item
-        android:id="@+id/navigation_workout"
-        android:icon="@drawable/icon_sync"
-        android:title="@string/refactor_button" />
-
-    <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/person_circle"
         android:title="@string/profile_button" />
