@@ -1,14 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cinza3"
+    android:orientation="vertical"
     tools:context=".fragments.HomeOrganizatorFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tvHello_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/hello_user"
+        android:fontFamily="@font/open_sans_regular"
+        android:textColor="@color/verde"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvLets_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_regular"
+        android:text="@string/lets_new"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/icMenu"
+        app:layout_constraintStart_toStartOf="@id/tvHello_user"
+        app:layout_constraintTop_toBottomOf="@id/tvHello_user" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icMenu"
+        android:layout_width="31dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvLets_new"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_more" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCreateNew"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvLets_new"
+        android:text="@string/create_new"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@id/tvHello_user"
+        app:layout_constraintEnd_toEndOf="@id/icMenu"
+        app:cornerRadius="7dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/open_sans_regular"/>
+
+    <TextView
+        android:id="@+id/tvMy_events"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_events"
+        android:textSize="18sp"
+        android:textColor="@color/verde"
+        app:layout_constraintStart_toStartOf="@id/tvHello_user"
+        app:layout_constraintTop_toBottomOf="@id/btnCreateNew"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/open_sans_regular"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMy_events"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvMy_events"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvOther_events"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/other_events"
+        android:textSize="18sp"
+        android:textColor="@color/verde"
+        app:layout_constraintStart_toStartOf="@id/tvHello_user"
+        app:layout_constraintTop_toBottomOf="@id/rvMy_events"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/open_sans_regular"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvOther_events"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvOther_events"
+        android:layout_marginTop="16dp"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btnvBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:labelVisibilityMode="labeled"
+        android:background="@color/verde"
+        app:itemIconTint="@color/navButton"
+        app:layout_constraintTop_toBottomOf="@id/rvOther_events"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/buttonnavigation"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
