@@ -6,8 +6,13 @@
     <data>
         <variable
             name="viewModel"
-            type="//viewModel" />
+            type="com.example.projetoeventos.model.viewmodel.ViewModelHome" />
     </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -15,28 +20,50 @@
         android:background="@color/background_preto"
         tools:context=".fragments.EventoFragment">
 
-        <TextView
-            android:id="@+id/btnVoltar"
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:drawableLeft=""
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            android:alpha="0.8"
             android:scaleType="centerCrop"
             android:src="@drawable/img_chacara"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/topoDegrade"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_topo_degrade"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnVoltar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_voltar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/btnFavoritar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_coracao_contornado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
-            android:id="@+id/tituloEvento"
+            android:id="@+id/nomeEstabelecimento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -52,7 +79,7 @@
             android:id="@+id/precoEvento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="20dp"
             android:fontFamily="@font/open_sans_bold"
             android:text="R$ 200,00"
@@ -62,7 +89,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <TextView
-            android:id="@+id/dataEvento"
+            android:id="@+id/mediaAvaliacao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -72,7 +99,7 @@
             android:textColor="@color/verde"
             android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tituloEvento" />
+            app:layout_constraintTop_toBottomOf="@+id/nomeEstabelecimento" />
 
         <TextView
             android:id="@+id/horarioEvento"
@@ -85,20 +112,20 @@
             android:textColor="@color/white"
             android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dataEvento" />
+            app:layout_constraintTop_toBottomOf="@+id/mediaAvaliacao" />
 
         <TextView
             android:id="@+id/diaSemanaEvento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="12dp"
             android:layout_marginTop="14dp"
             android:fontFamily="@font/open_sans_regular"
             android:text="(Sexta-feira)"
             android:textColor="@color/white"
             android:textSize="18dp"
-            app:layout_constraintStart_toEndOf="@+id/dataEvento"
-            app:layout_constraintTop_toBottomOf="@+id/tituloEvento" />
+            app:layout_constraintStart_toEndOf="@+id/mediaAvaliacao"
+            app:layout_constraintTop_toBottomOf="@+id/nomeEstabelecimento" />
 
         <TextView
             android:id="@+id/logradouroNumeroEvento"
@@ -227,6 +254,50 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleRestricoesEvento" />
 
+        <TextView
+            android:id="@+id/titleDescricaoEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Descrição do evento"
+            android:textColor="@color/verde"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/restricoesEvento" />
+
+        <TextView
+            android:id="@+id/DescricaoEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Evento especial  com participação especial de MC Canivete, DJ Estrela e Pedro Zorro do Asfalto."
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleDescricaoEvento" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/btn_edit"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="CONFIRMAR PRESENÇA"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DescricaoEvento" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>

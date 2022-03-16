@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" >
+
+        <data>
+            <variable
+                name="viewModel"
+                type="com.example.projetoeventos.model.viewmodel.ViewModelHome" />
+        </data>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_preto"
+                tools:context=".fragments.EstabelecimentoFragment">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/fachada_espaco_das_americas"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/topoDegrade"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img_topo_degrade"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/btnVoltar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/ic_voltar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/btnFavoritar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_coracao_contornado"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/nomeEtbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="Espaço das Américas"
+                    android:textColor="@color/verde"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                <TextView
+                    android:id="@+id/mediaAvaliacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="3.5"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nomeEtbl" />
+
+                <RatingBar
+                    android:id="@+id/estrelasAvaliacao"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="20dp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:progressBackgroundTint="@color/cinza2"
+                    android:progressTint="@color/amarelo"
+                    android:rating="3.5"
+                    android:stepSize="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/mediaAvaliacao"
+                    app:layout_constraintTop_toBottomOf="@+id/nomeEtbl" />
+
+                <TextView
+                    android:id="@+id/numeroAvaliacoes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="(20)"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/estrelasAvaliacao"
+                    app:layout_constraintTop_toBottomOf="@+id/nomeEtbl" />
+
+                <TextView
+                    android:id="@+id/titleSobreEtbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="Sobre"
+                    android:textColor="@color/verde"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/estrelasAvaliacao" />
+
+                <TextView
+                    android:id="@+id/sobreEvento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="Lorem ipsum dolor sit amet, labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut."
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleSobreEtbl" />
+
+
+                <ImageView
+                    android:id="@+id/ic_endereco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_endereco"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sobreEvento" />
+
+                <TextView
+                    android:id="@+id/logradouroNumeroEtbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="Av. Vicente Costa, 450"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/ic_endereco"
+                    app:layout_constraintTop_toBottomOf="@+id/sobreEvento" />
+
+
+                <TextView
+                    android:id="@+id/bairroCidadeEstadoEtbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="Jardim Europa - São Paulo / SP"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/ic_endereco"
+                    app:layout_constraintTop_toBottomOf="@+id/logradouroNumeroEtbl" />
+
+                <ImageView
+                    android:id="@+id/ic_horario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_horario"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bairroCidadeEstadoEtbl" />
+
+
+                <TextView
+                    android:id="@+id/horarioEtbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="22dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="09:00 - 01:00"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/ic_horario"
+                    app:layout_constraintTop_toBottomOf="@+id/bairroCidadeEstadoEtbl" />
+
+                <ImageView
+                    android:id="@+id/ic_telefone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_telefone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/horarioEtbl" />
+
+
+                <TextView
+                    android:id="@+id/telefoneEtbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="22dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="(11) 4374-8574"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/ic_telefone"
+                    app:layout_constraintTop_toBottomOf="@+id/horarioEtbl" />
+
+                <TextView
+                    android:id="@+id/titleAvaliacoes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="Avaliações"
+                    android:textColor="@color/verde"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/telefoneEtbl" />
+
+                <TextView
+                    android:id="@+id/btnAvaliarLocal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginEnd="20dp"
+                    android:drawablePadding="6dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="Avaliar local"
+                    android:textAlignment="center"
+                    android:textColor="@color/verde"
+                    android:textSize="12sp"
+                    app:drawableLeftCompat="@drawable/ic_avaliar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/telefoneEtbl" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/fotoUsuario"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/foto_perfil"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleAvaliacoes" />
+
+                <TextView
+                    android:id="@+id/nomeUsuarioAvaliacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="Ronalducho do Dibre"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/fotoUsuario"
+                    app:layout_constraintTop_toBottomOf="@+id/titleAvaliacoes" />
+
+                <RatingBar
+                    android:id="@+id/estrelasAvaliacaoUsuario"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:progressBackgroundTint="@color/cinza2"
+                    android:progressTint="@color/amarelo"
+                    android:rating="5"
+                    android:stepSize="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/fotoUsuario"
+                    app:layout_constraintTop_toBottomOf="@+id/nomeUsuarioAvaliacao" />
+
+                <TextView
+                    android:id="@+id/dataAvaliacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="• 02/03/2021"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/estrelasAvaliacaoUsuario"
+                    app:layout_constraintTop_toBottomOf="@+id/nomeUsuarioAvaliacao" />
+
+                <TextView
+                    android:id="@+id/comentario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="Não é permitido entrar no estabelecimento sem vestimenta ou com posse de arma."
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/estrelasAvaliacaoUsuario" />
+
+
+                <TextView
+                    android:id="@+id/btnVerTodasAvaliacoes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Ver todas"
+                    android:textColor="@color/verde"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/comentario" />
+
+                <TextView
+                    android:id="@+id/titleProximosEventosAqui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="Próximos eventos aqui"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnVerTodasAvaliacoes" />
+
+                <ImageView
+                    android:id="@+id/imagensEtbl"
+                    android:layout_width="220dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/fachada_espaco_das_americas"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleProximosEventosAqui" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </layout>

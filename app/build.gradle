@@ -47,4 +47,5 @@ dependencies {
 
     //Circle ImageView
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.gjiazhe:scrollparallaximageview:1.0'
 }

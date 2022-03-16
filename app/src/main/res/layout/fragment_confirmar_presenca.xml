@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModelHome"
+            type="com.example.projetoeventos.model.viewmodel.ViewModelHome" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cinza2"
+        android:elevation="30dp"
+        tools:context=".ConfirmarPresencaFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/btn_edit"
+            android:backgroundTint="@color/cinza1"
+            android:focusable="true"
+            android:elevation="30dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_nome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="Você tem certeza que deseja confirmar presença neste evento?"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.widget.Button
+                android:id="@+id/btnConfirma"
+                android:layout_width="140dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/btn_edit"
+                android:text="Confirmar"
+                android:fontFamily="@font/open_sans_bold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_nome" />
+
+            <android.widget.Button
+                android:id="@+id/btnNaoConfirma"
+                android:layout_width="140dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/btn_edit"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="Cancelar"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_nome" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
