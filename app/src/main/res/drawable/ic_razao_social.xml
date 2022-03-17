@@ -7,7 +7,7 @@
         android:fillColor="@color/cinza2"
         android:pathData="M248.28,301a5.24,5.24 0,0 0,-5.24 5.25v78.34a5.24,5.24 0,1 0,10.48 0V306.27A5.24,5.24 0,0 0,248.28 301Z"/>
     <path
-        android:fillColor="@color/cinza1"
+        android:fillColor="@color/cinza2"
         android:pathData="M166.2,301a5.25,5.25 0,0 0,-5.25 5.25v78.34a5.25,5.25 0,1 0,10.49 0V306.27A5.25,5.25 0,0 0,166.2 301Z"/>
     <path
         android:fillColor="@color/cinza2"
