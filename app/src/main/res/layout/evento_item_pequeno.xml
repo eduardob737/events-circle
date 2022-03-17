@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/image"
-        android:layout_width="120dp"
-        android:layout_height="130dp"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
         android:scaleType="centerCrop"
         android:src="@drawable/image_estabelecimento"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,12 +70,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="20dp"
         android:fontFamily="@font/open_sans_regular"
         android:text="São Paulo"
         android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/divider"
         app:layout_constraintTop_toTopOf="@id/divider" />
 
     <TextView
@@ -91,6 +91,7 @@
         app:layout_constraintStart_toStartOf="@id/evento_data_mes" />
 
     <ImageView
+        android:id="@+id/img_favorito"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_coracao"

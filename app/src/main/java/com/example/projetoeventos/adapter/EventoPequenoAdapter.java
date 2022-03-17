@@ -14,14 +14,14 @@ import com.example.projetoeventos.model.Evento;
 
 import java.util.List;
 
-public class EventoGrandeAdapter extends RecyclerView.Adapter<EventoGrandeAdapter.MyViewHolder>{
+public class EventoPequenoAdapter extends RecyclerView.Adapter<EventoPequenoAdapter.MyViewHolder>{
 
     private List<Evento> dataSet;
 
-    public EventoGrandeAdapter() {
+    public EventoPequenoAdapter() {
     }
 
-    public EventoGrandeAdapter(List<Evento> dataSet) {
+    public EventoPequenoAdapter(List<Evento> dataSet) {
         this.dataSet = dataSet;
     }
 
@@ -29,7 +29,7 @@ public class EventoGrandeAdapter extends RecyclerView.Adapter<EventoGrandeAdapte
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.evento_item_grande, parent, false);
+                .inflate(R.layout.evento_item_pequeno, parent, false);
 
         return new MyViewHolder(view);
     }
@@ -40,7 +40,7 @@ public class EventoGrandeAdapter extends RecyclerView.Adapter<EventoGrandeAdapte
 
     @Override
     public int getItemCount() {
-        return 5;
+        return 20;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{

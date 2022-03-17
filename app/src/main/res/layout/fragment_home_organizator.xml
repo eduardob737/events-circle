@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cinza3"
+    android:background="@color/background_preto"
     android:orientation="vertical"
     tools:context=".fragments.HomeOrganizatorFragment">
-
+<!--
     <TextView
         android:id="@+id/tvHello_user"
         android:layout_width="wrap_content"
@@ -109,5 +109,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:menu="@menu/buttonnavigation"/>
 
-
+!-->
 </androidx.constraintlayout.widget.ConstraintLayout>
