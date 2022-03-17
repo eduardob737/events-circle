@@ -21,8 +21,10 @@ public class LoginActivity extends AppCompatActivity {
         binding.getRoot();
 
         binding.btnEntrar.setOnClickListener(view -> {
-            Intent intent = new Intent(this, HomeActivity.class);
-            startActivity(intent);
+            if(!binding.edtEmail.getText().toString().isEmpty() && !binding.editSenha.getText().toString().isEmpty() ) {
+                Intent intent = new Intent(this, HomeActivity.class);
+                startActivity(intent);
+            }
         });
 
         binding.txtCriaConta.setOnClickListener(view -> {
