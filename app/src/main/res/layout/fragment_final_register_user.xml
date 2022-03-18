@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
             name="viewModelRegister"
-            type="com.example.projetoeventos.model.viewmodel.ViewModelRegister" />
+            type="com.example.projetoeventos.model.viewmodel.ViewModelRegisterUser" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,7 +15,7 @@
         android:background="@color/background_preto">
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/btn_voltar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -27,13 +28,13 @@
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="88dp"
-            android:layout_marginTop="28dp"
             android:text="@string/criar_conta"
             android:textColor="@color/verde"
             android:textSize="26sp"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="@+id/btn_voltar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_voltar" />
 
         <TextView
             android:id="@+id/textView10"
@@ -62,15 +63,17 @@
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
         <EditText
-            android:id="@+id/editText8"
+            android:id="@+id/txt_email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="32dp"
+            android:textColor="@color/white"
             android:background="@drawable/edt_custom"
             android:drawableEnd="@drawable/ic_email"
             android:hint="@string/email"
+            android:text="@{viewModelRegister.email}"
             android:inputType="textEmailAddress"
             android:textColorHint="@color/cinza2"
             android:textSize="16sp"
@@ -79,25 +82,27 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <EditText
-            android:id="@+id/editText9"
+            android:id="@+id/txt_senha"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="32dp"
+            android:textColor="@color/white"
             android:background="@drawable/edt_custom"
             android:drawableEnd="@drawable/ic_cadeado"
             android:hint="@string/senha"
+            android:text="@{viewModelRegister.senha}"
             android:inputType="numberPassword"
             android:maxLength="6"
             android:textColorHint="@color/cinza2"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText8" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_email" />
 
         <EditText
-            android:id="@+id/editText10"
+            android:id="@+id/txt_confirmaSenha"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="32dp"
@@ -106,13 +111,14 @@
             android:background="@drawable/edt_custom"
             android:drawableEnd="@drawable/ic_cadeado"
             android:hint="@string/confirmar_senha"
+            android:textColor="@color/white"
             android:inputType="numberPassword"
             android:maxLength="6"
             android:textColorHint="@color/cinza2"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText9" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_senha" />
 
         <androidx.appcompat.widget.AppCompatCheckBox
             android:id="@+id/appCompatCheckBox"
@@ -125,7 +131,7 @@
             android:text="@string/li_concordo"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText10" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_confirmaSenha" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -136,9 +142,10 @@
             android:textColor="@color/verde"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/appCompatCheckBox"
-            app:layout_constraintTop_toBottomOf="@+id/editText10" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_confirmaSenha" />
 
         <android.widget.Button
+            android:id="@+id/confirmar_cadastro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"

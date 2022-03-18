@@ -10,8 +10,11 @@ public class Usuario extends Cliente{
 
 	private Long id;
 	private String cpf;
+	private String dataNascimento;
 	private List<Empresa> empresas;
 	private TipoCliente tipoCliente;
+
+
 
 	@Override
 	public Long getId() {
@@ -29,6 +32,14 @@ public class Usuario extends Cliente{
 
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
+	}
+
+	public void setDataNascimento(String dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
+	public String getDataNascimento() {
+		return dataNascimento;
 	}
 
 	public List<Empresa> getEmpresas() {
