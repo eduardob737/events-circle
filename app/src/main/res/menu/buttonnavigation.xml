@@ -4,10 +4,10 @@
     <item
         android:id="@+id/navigation_exercises"
         android:icon="@drawable/icon_metro"
-        android:title="@string/home_button" />
+        android:title="TODO" />
 
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/person_circle"
-        android:title="@string/profile_button" />
+        android:title="TODO" />
 </menu>

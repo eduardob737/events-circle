@@ -36,4 +36,30 @@
     <string name="estabelecimento_recomendados">Estabelecimento recomendados</string>
     <string name="eventos_do_mes">Eventos do mês</string>
     <string name="frase1_boas_vindas">Fique por dentro das melhores atrações em sua cidade e encontre eventos baseados em seus gostos e interesses</string>
+
+    <!-- Tela Organizador Home -->
+    <string name="other_events">Outros Eventos</string>
+    <string name="my_events">Meus eventos</string>
+    <string name="lets_new">Vamos organizar um evento?</string>
+    <string name="Helo_user">Olá, Pedro!</string>
+
+    <!-- Tela Organizador Novo evento -->
+    <string name="new_event">Novo Evento</string>
+    <string name="lets_go">Vamos lá! Para criar um evento, precisamos de algumas informações.</string>
+    <string name="define_name">Defina um nome para seu evento</string>
+    <string name="description_event">Descreva como será seu evento</string>
+
+    <!-- Tela Data novo Evento -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="data_do_evento">Data do evento</string>
+    <string name="time_initi">Horário Inicio</string>
+    <string name="end_time">Horãrio Término</string>
+    <string name="avant">Avançar</string>
+
+    <!-- Tela Local novo Evento -->
+    <string name="text_will">Agora... precisamos de algumas informações de onde vai acontecer o seu evento.</string>
+    <string name="cep">CEP</string>
+    <string name="adress">Logradouro</string>
+
+
 </resources>
