@@ -6,17 +6,16 @@
     <data>
         <variable
             name="viewModelRegister"
-            type="com.example.projetoeventos.model.viewmodel.ViewModelRegister" />
+            type="com.example.projetoeventos.model.viewmodel.ViewModelRegisterUser" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background_preto"
-        tools:context=".CriarContaActivity">
+        tools:context=".activity.RegisterActivity">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/btn_voltar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -29,20 +28,20 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="88dp"
-            android:layout_marginTop="28dp"
             android:text="@string/criar_conta"
             android:textColor="@color/verde"
             android:textSize="26sp"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="@+id/btn_voltar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_voltar" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="50dp"
             android:gravity="center"
             android:text="@string/texto_cadastro"
@@ -57,9 +56,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="20dp"
-            android:text="@string/texto_preencher"
+            android:text="* Escolha um dos campos para avançar."
             android:textColor="@color/white"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -68,44 +67,47 @@
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <androidx.appcompat.widget.AppCompatCheckBox
-            android:id="@+id/appCompatCheckBox"
+            android:id="@+id/checkPessoaFisica"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
             android:buttonTint="@color/verde"
-            android:textSize="14sp"
-            android:layout_marginTop="30dp"
+            android:checked="true"
             android:text="@string/pessoa_fisica"
             android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/checkEmpresa"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <androidx.appcompat.widget.AppCompatCheckBox
-            android:id="@+id/appCompatCheckBox2"
+            android:id="@+id/checkEmpresa"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:textSize="14sp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="16dp"
             android:buttonTint="@color/verde"
-            android:layout_marginEnd="40dp"
             android:text="@string/pessoa_juridica"
             android:textColor="@color/white"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/appCompatCheckBox"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/checkPessoaFisica"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <android.widget.Button
+            android:id="@+id/btn_continuar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="64dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/btn_verde"
             android:text="@string/continuar"
+            android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/appCompatCheckBox2" />
+            app:layout_constraintTop_toBottomOf="@+id/checkEmpresa" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

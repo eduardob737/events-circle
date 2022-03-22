@@ -4,15 +4,10 @@
     <item
         android:id="@+id/navigation_exercises"
         android:icon="@drawable/icon_metro"
-        android:title="home_button" />
-
-    <item
-        android:id="@+id/navigation_workout"
-        android:icon="@drawable/icon_sync"
-        android:title="refactor_button" />
+        android:title="TODO" />
 
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/person_circle"
-        android:title="profile_button" />
+        android:title="TODO" />
 </menu>

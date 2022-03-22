@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_register"
+    app:startDestination="@id/firstRegisterFragment">
+
+    <fragment
+        android:id="@+id/firstRegisterFragment"
+        android:name="com.example.projetoeventos.fragments.register.FirstRegisterFragment"
+        android:label="FirstRegisterFragment" >
+        <action
+            android:id="@+id/action_firstRegisterFragment_to_pessoaFisicaFragment"
+            app:destination="@id/pessoaFisicaFragment" />
+        <action
+            android:id="@+id/action_firstRegisterFragment_to_pessoaJuridicaFragment"
+            app:destination="@id/pessoaJuridicaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pessoaFisicaFragment"
+        android:name="com.example.projetoeventos.fragments.register.PessoaFisicaFragment"
+        android:label="PessoaFisicaFragment" >
+        <action
+            android:id="@+id/action_pessoaFisicaFragment_to_finalRegisterFragment"
+            app:destination="@id/finalRegisterFragment" />
+        <action
+            android:id="@+id/action_pessoaFisicaFragment_to_firstRegisterFragment"
+            app:destination="@id/firstRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pessoaJuridicaFragment"
+        android:name="com.example.projetoeventos.fragments.register.PessoaJuridicaFragment"
+        android:label="PessoaJuridicaFragment" >
+        <action
+            android:id="@+id/action_pessoaJuridicaFragment_to_firstRegisterFragment"
+            app:destination="@id/firstRegisterFragment" />
+        <action
+            android:id="@+id/action_pessoaJuridicaFragment_to_finalRegisterEmpresaFragment"
+            app:destination="@id/finalRegisterEmpresaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalRegisterFragment"
+        android:name="com.example.projetoeventos.fragments.register.FinalRegisterUserFragment"
+        android:label="FinalRegisterFragment" >
+        <action
+            android:id="@+id/action_finalRegisterFragment_to_pessoaFisicaFragment"
+            app:destination="@id/pessoaFisicaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalRegisterEmpresaFragment"
+        android:name="com.example.projetoeventos.fragments.register.FinalRegisterEmpresaFragment"
+        android:label="FinalRegisterEmpresaFragment" >
+        <action
+            android:id="@+id/action_finalRegisterEmpresaFragment_to_pessoaJuridicaFragment"
+            app:destination="@id/pessoaJuridicaFragment" />
+    </fragment>
+</navigation>
