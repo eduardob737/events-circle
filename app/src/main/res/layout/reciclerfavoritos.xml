@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/foto_evento"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:background="@color/verde"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/evento_data_dia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="23"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@id/evento_data_mes"
+            app:layout_constraintEnd_toEndOf="@id/evento_data_mes"
+            app:layout_constraintTop_toTopOf="@id/foto_evento" />
+
+        <TextView
+            android:id="@+id/evento_data_mes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="MAR"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/evento_data_dia" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            app:dividerColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/evento_data_mes"
+            app:layout_constraintEnd_toStartOf="@id/evento_hora"
+            app:layout_constraintStart_toEndOf="@id/evento_data_dia"
+            app:layout_constraintTop_toTopOf="@id/evento_data_dia" />
+
+        <TextView
+            android:id="@+id/evento_hora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="20H"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@id/divider"
+            app:layout_constraintStart_toEndOf="@id/divider"
+            app:layout_constraintTop_toTopOf="@id/divider" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_coracao"
+            app:layout_constraintEnd_toEndOf="@id/foto_evento"
+            app:layout_constraintTop_toTopOf="@id/foto_evento" />
+
+        <TextView
+            android:id="@+id/evento_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Baile do cinga"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@id/evento_cidade"
+            app:layout_constraintStart_toStartOf="@id/evento_data_mes" />
+
+        <TextView
+            android:id="@+id/evento_cidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="São Paulo"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/foto_evento"
+            app:layout_constraintStart_toStartOf="@id/evento_titulo" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

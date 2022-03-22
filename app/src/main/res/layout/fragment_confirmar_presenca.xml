@@ -12,34 +12,41 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/cinza2"
         android:elevation="30dp"
         tools:context=".ConfirmarPresencaFragment">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:alpha="0.7"/>
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="200dp"
             android:layout_margin="15dp"
             android:background="@drawable/btn_edit"
             android:backgroundTint="@color/cinza1"
-            android:focusable="true"
             android:elevation="30dp"
+            android:focusable="true"
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.386">
 
             <TextView
-                android:id="@+id/txt_nome"
+                android:id="@+id/txt_frase"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginStart="14dp"
-                android:layout_marginEnd="14dp"
-                android:fontFamily="@font/open_sans_bold"
-                android:text="Você tem certeza que deseja confirmar presença neste evento?"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:text="Tem certeza que deseja CANCELAR sua presença neste evento?"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="18sp"
@@ -47,32 +54,48 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <android.widget.Button
-                android:id="@+id/btnConfirma"
-                android:layout_width="140dp"
-                android:layout_height="44dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="28dp"
-                android:background="@drawable/btn_edit"
-                android:text="Confirmar"
-                android:fontFamily="@font/open_sans_bold"
-                android:textColor="@color/black"
+
+            <TextView
+                android:id="@+id/txt_frase_dois"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:text="(Você poderá confirmar presença depois)"
+                android:textAlignment="center"
+                android:textColor="@color/verde"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.489"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txt_nome" />
+                app:layout_constraintTop_toBottomOf="@+id/txt_frase" />
 
             <android.widget.Button
-                android:id="@+id/btnNaoConfirma"
+                android:id="@+id/btnSim"
                 android:layout_width="140dp"
                 android:layout_height="44dp"
-                android:layout_marginTop="28dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/btn_edit"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="SIM"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_frase_dois" />
+
+            <android.widget.Button
+                android:id="@+id/btnNao"
+                android:layout_width="140dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/btn_edit"
                 android:backgroundTint="@color/white"
                 android:fontFamily="@font/open_sans_bold"
-                android:text="Cancelar"
+                android:text="NÃO"
                 android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txt_nome" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_frase_dois" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

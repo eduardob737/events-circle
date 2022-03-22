@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph_home">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_home"
+    app:startDestination="@id/eventoFragment">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.projetoeventos.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/eventoFragment"
+        android:name="com.example.projetoeventos.fragments.EventoFragment"
+        android:label="fragment_evento"
+        tools:layout="@layout/fragment_evento" />
+
+    <fragment
+        android:id="@+id/estabelecimentoFragment"
+        android:name="com.example.projetoeventos.fragments.EstabelecimentoFragment"
+        android:label="fragment_estabelecimento"
+        tools:layout="@layout/fragment_estabelecimento" />
+
+    <fragment
+        android:id="@+id/avaliacaoFragment"
+        android:name="com.example.projetoeventos.fragments.AvaliacaoFragment"
+        android:label="fragment_AvaliacaoFragment"
+        tools:layout="@layout/fragment_avaliacao" />
+    <action
+        android:id="@+id/action_back_to_page_estabelecimento"
+        app:destination="@id/estabelecimentoFragment" />
+
+    <fragment
+        android:id="@+id/confirmaPresencaFragment"
+        android:name="com.example.projetoeventos.fragments.ConfirmarPresencaFragment"
+        android:label="fragment_confirmaPresenca"
+        tools:layout="@layout/fragment_confirmar_presenca" />
+    <action
+        android:id="@+id/action_back_to_page_evento"
+        app:destination="@id/eventoFragment" />
+
 
 </navigation>

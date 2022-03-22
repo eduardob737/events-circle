@@ -9,6 +9,12 @@
             type="com.example.projetoeventos.model.viewmodel.ViewModelHome" />
     </data>
 
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -51,7 +57,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
         <ImageView
             android:id="@+id/btnFavoritar"
             android:layout_width="30dp"
@@ -63,15 +68,15 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/nomeEstabelecimento"
+            android:id="@+id/nomeEvento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="24dp"
             android:fontFamily="@font/open_sans_bold"
             android:text="Réveillon 2023"
             android:textColor="@color/white"
-            android:textSize="24dp"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -84,72 +89,103 @@
             android:fontFamily="@font/open_sans_bold"
             android:text="R$ 200,00"
             android:textColor="@color/verde"
-            android:textSize="20dp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/ic_calendario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp"
+            android:src="@drawable/ic_calendario"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nomeEvento"
+            app:tint="@color/verde" />
 
         <TextView
             android:id="@+id/mediaAvaliacao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
             android:fontFamily="@font/open_sans_regular"
             android:text="31/12/2022"
-            android:textColor="@color/verde"
-            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/ic_calendario"
+            app:layout_constraintTop_toBottomOf="@+id/nomeEvento" />
+
+        <ImageView
+            android:id="@+id/ic_horario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_horario"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nomeEstabelecimento" />
+            app:layout_constraintTop_toBottomOf="@+id/ic_calendario" />
 
         <TextView
             android:id="@+id/horarioEvento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="14dp"
-            android:fontFamily="@font/open_sans_bold"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/open_sans_regular"
             android:text="20:00 - 03:30"
             android:textColor="@color/white"
-            android:textSize="18dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/ic_horario"
             app:layout_constraintTop_toBottomOf="@+id/mediaAvaliacao" />
 
         <TextView
             android:id="@+id/diaSemanaEvento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
             android:fontFamily="@font/open_sans_regular"
             android:text="(Sexta-feira)"
             android:textColor="@color/white"
-            android:textSize="18dp"
+            android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/mediaAvaliacao"
-            app:layout_constraintTop_toBottomOf="@+id/nomeEstabelecimento" />
+            app:layout_constraintTop_toBottomOf="@+id/nomeEvento" />
+
+        <ImageView
+            android:id="@+id/ic_endereco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
+            android:src="@drawable/ic_endereco"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ic_horario" />
 
         <TextView
             android:id="@+id/logradouroNumeroEvento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/open_sans_regular"
             android:text="Avenida Paulista, 150"
             android:textColor="@color/white"
-            android:textSize="18dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/ic_endereco"
             app:layout_constraintTop_toBottomOf="@+id/horarioEvento" />
 
         <TextView
             android:id="@+id/bairroCidadeEstadoEvento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="8dp"
             android:fontFamily="@font/open_sans_regular"
             android:text="Jardim Tiradentes - Osasco / SP"
             android:textColor="@color/white"
-            android:textSize="18dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/ic_endereco"
             app:layout_constraintTop_toBottomOf="@+id/logradouroNumeroEvento" />
 
         <TextView
@@ -161,7 +197,7 @@
             android:fontFamily="@font/open_sans_bold"
             android:text="Tipo do Evento"
             android:textColor="@color/verde"
-            android:textSize="18dp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bairroCidadeEstadoEvento" />
 
@@ -173,7 +209,7 @@
             android:fontFamily="@font/open_sans_regular"
             android:text="Festa"
             android:textColor="@color/white"
-            android:textSize="18dp"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleTipoEvento" />
 
@@ -186,7 +222,7 @@
             android:fontFamily="@font/open_sans_bold"
             android:text="Categoria do Evento"
             android:textColor="@color/verde"
-            android:textSize="18dp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tipoEvento" />
 
@@ -198,7 +234,7 @@
             android:fontFamily="@font/open_sans_regular"
             android:text="Família"
             android:textColor="@color/white"
-            android:textSize="18dp"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleCategoriaEvento" />
 
@@ -211,7 +247,7 @@
             android:fontFamily="@font/open_sans_bold"
             android:text="Classificação Idade"
             android:textColor="@color/verde"
-            android:textSize="18dp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/categoriaEvento" />
 
@@ -223,7 +259,7 @@
             android:fontFamily="@font/open_sans_regular"
             android:text="Livre"
             android:textColor="@color/white"
-            android:textSize="18dp"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleClassificacaoIdade" />
 
@@ -236,7 +272,7 @@
             android:fontFamily="@font/open_sans_bold"
             android:text="Restrições"
             android:textColor="@color/verde"
-            android:textSize="18dp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/classificacaoIdade" />
 
@@ -249,7 +285,7 @@
             android:fontFamily="@font/open_sans_regular"
             android:text="Não é permitido entrar no estabelecimento sem vestimenta ou com posse de arma."
             android:textColor="@color/white"
-            android:textSize="18dp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleRestricoesEvento" />
@@ -263,7 +299,7 @@
             android:fontFamily="@font/open_sans_bold"
             android:text="Descrição do evento"
             android:textColor="@color/verde"
-            android:textSize="18dp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/restricoesEvento" />
 
@@ -276,12 +312,31 @@
             android:fontFamily="@font/open_sans_regular"
             android:text="Evento especial  com participação especial de MC Canivete, DJ Estrela e Pedro Zorro do Asfalto."
             android:textColor="@color/white"
-            android:textSize="18dp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleDescricaoEvento" />
 
-        <com.google.android.material.button.MaterialButton
+
+            <android.widget.Button
+                android:id="@+id/btnConfirmarPresenca"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/btn_edit"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="CONFIRMAR PRESENÇA"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/DescricaoEvento" />
+
+        <android.widget.Button
+            android:id="@+id/btnCancelarPresenca"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="20dp"
@@ -289,15 +344,26 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/btn_edit"
+            android:backgroundTint="@color/white"
             android:fontFamily="@font/open_sans_bold"
-            android:text="CONFIRMAR PRESENÇA"
-            android:textSize="16dp"
+            android:text="CANCELAR PRESENÇA"
+            android:textSize="14sp"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/DescricaoEvento" />
 
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </layout>
