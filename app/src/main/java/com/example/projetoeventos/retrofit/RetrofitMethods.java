@@ -13,10 +13,10 @@ import retrofit2.http.Path;
 public interface RetrofitMethods {
 
     @POST("usuarios/criar")
-    Call<Usuario> usuarioPost(@Body Usuario user);
+    Call<Usuario> createUser(@Body Usuario user);
 
     @GET("usuarios/{id}")
-    Call<Usuario> usuarioGet(@Path("id") Long id);
+    Call<Usuario> usuarioGetById(@Path("id") Long id);
 
     @GET("usuarios/nome/{nome}")
     Call<Usuario> usuarioGetByNome(@Path("nome") String nome);

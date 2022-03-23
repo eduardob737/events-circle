@@ -23,7 +23,6 @@ public class PessoaFisicaFragment extends Fragment {
     private FragmentPessoaFisicaBinding binding = null;
     private ViewModelRegisterUser sharedViewModel = null;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -45,9 +44,8 @@ public class PessoaFisicaFragment extends Fragment {
             String dataNascimento = binding.txtDataNascimento.getText().toString();
 
             if (!nome.isEmpty() && !cpf.isEmpty() && !dataNascimento.isEmpty()){
-            sharedViewModel.setNomeCompleto(nome);
-            sharedViewModel.setCpf(cpf);
-            sharedViewModel.setDataNascimento(dataNascimento);
+                sharedViewModel.setNomeCompleto(nome);
+                sharedViewModel.setCpf(cpf);
 
             NavHostFragment.findNavController(PessoaFisicaFragment.this).
                     navigate(R.id.action_pessoaFisicaFragment_to_finalRegisterFragment);

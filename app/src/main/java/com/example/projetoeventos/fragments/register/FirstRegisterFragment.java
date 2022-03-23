@@ -17,7 +17,6 @@ import com.example.projetoeventos.model.Usuario;
 public class FirstRegisterFragment extends Fragment {
 
     private FragmentFirstRegisterBinding binding = null;
-    private Usuario user = new Usuario();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

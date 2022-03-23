@@ -11,6 +11,7 @@ public class RetrofitService {
             "http://192.168.0.106:8080/api/";
 
     private static Retrofit retrofit = null;
+    private static RetrofitMethods methods = null;
 
     public static Retrofit getRetrofitInstance() {
         if (retrofit == null) {
@@ -22,4 +23,9 @@ public class RetrofitService {
         return retrofit;
     }
 
+    public static RetrofitMethods getRetrofitMethods() {
+        if(methods == null)
+            methods = getRetrofitInstance().create(RetrofitMethods.class);
+        return methods;
+    }
 }

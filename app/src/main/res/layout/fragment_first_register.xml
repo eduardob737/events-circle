@@ -12,8 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background_preto"
-        tools:context=".fragments.FisterRegisterFragment">
+        tools:context=".activity.RegisterActivity">
 
         <ImageView
             android:id="@+id/btn_voltar"
@@ -105,6 +104,7 @@
             android:layout_marginEnd="20dp"
             android:background="@drawable/btn_verde"
             android:text="@string/continuar"
+            android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

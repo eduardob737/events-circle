@@ -41,9 +41,11 @@ public class FinalRegisterUserFragment extends Fragment {
             String senha = binding.txtSenha.getText().toString();
             String senhaConfirmada = binding.txtConfirmaSenha.getText().toString();
 
-            if (!email.isEmpty() && !senha.isEmpty() && !senhaConfirmada.isEmpty() && senha == senhaConfirmada) {
+            if (!email.isEmpty() && !senha.isEmpty() && !senhaConfirmada.isEmpty() && senha.equals(senhaConfirmada)) {
                 sharedViewModel.setEmail(email);
                 sharedViewModel.setSenha(senha);
+
+                sharedViewModel.registerUser();
 
                 //TODO NAVGRAPH PROXIMA PAGINA
 
